@@ -112,6 +112,8 @@ void FindSolution(int startState[N][N], int finalState[N][N], int x, int y) {
                                  min->y + dy[i],
                                  min->height + 1, min);
                       p->cost = Heuristic(p->matrix, finalState);
+                      // p->cost = CalculateCost(p->matrix, finalState);
+
                 q.push(p);
             }
         }
